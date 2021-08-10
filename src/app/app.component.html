@@ -1,0 +1,9 @@
+<div>{{ title }} app is running!</div>
+<app-welcome-user [name]="userName"></app-welcome-user>
+<div>
+  <input type="text" [formControl]="nameControl">
+  <button [disabled]="disabled" (click)="onSetUserClick()">set user name</button>
+</div>
+
+<div>UserName: {{userName}}</div>
+<div>UserName$: {{userName$ | async}}</div>
